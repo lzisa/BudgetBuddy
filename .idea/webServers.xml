@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="2062b597-dc55-45df-8da7-69bd652090eb" name="Hetzner_FH" url="http://budgetbuddyapi.s2010456035.student.kwmhgb.at ">
+        <fileTransfer rootFolder="/public_html/" accessType="SFTP" host="dedi50.your-server.de" port="22" sshConfigId="6a6e435a-2e13-4e97-9976-ed2d5f6c5488" sshConfig="sstud31@dedi50.your-server.de:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
