@@ -18,7 +18,8 @@ return new class extends Migration
             $table->timestamps();
             $table->string('title');
             $table->integer('amount');
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->foreignId('subcategory_id')->constrained();
+            $table->foreignId('user_id')->default(1);
         });
     }
 
