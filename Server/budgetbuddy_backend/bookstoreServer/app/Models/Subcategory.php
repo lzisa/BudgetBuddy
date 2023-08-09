@@ -18,4 +18,8 @@ class Subcategory extends Model
     public function transactions(): HasMany{
         return $this->hasMany(Transaction::class);
     }
+
+    public function user(): BelongsTo{
+        return $this->belongsTo(User::class);
+    }
 }

@@ -18,6 +18,7 @@ return new class extends Migration
             $table->timestamps();
             $table->string('title');
             $table->string('color');
+            $table->foreignId('user_id')->default(1);
         });
     }
 

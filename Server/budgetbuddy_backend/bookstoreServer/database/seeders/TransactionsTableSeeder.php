@@ -33,21 +33,26 @@ class TransactionsTableSeeder extends Seeder
         $category = new Category();
         $category->title='KFZ';
         $category->color='#123456';
+        $category->user()->associate($user2);
         $category->save();
 
         $cat_uncategorized = new Category();
         $cat_uncategorized->title='Unkategorisiert';
         $cat_uncategorized->color='#9f75h';
+        $cat_uncategorized->user()->associate($user2);
         $cat_uncategorized->save();
 
         $sub_uncategorized= new Subcategory();
         $sub_uncategorized->title='unkategorisiert';
         $sub_uncategorized->category()->associate($cat_uncategorized);
+        $sub_uncategorized->user()->associate($user2);
         $sub_uncategorized->save();
 
         $subcategory= new Subcategory();
         $subcategory->title='tanken';
         $subcategory->category()->associate($category);
+        $subcategory->user()->associate($user2);
+
         $subcategory->save();
 
         $transaction = new Transaction();
