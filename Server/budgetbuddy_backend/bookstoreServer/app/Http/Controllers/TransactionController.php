@@ -11,13 +11,13 @@ class TransactionController extends Controller
 {
     public function index(): jsonResponse
     {
-        $transaction = Transaction::with(['subcategory', 'user'])->get();
+        $transaction = Transaction::with(['subcategory.category', 'user'])->get();
         return response()->json($transaction, 200);
     }
 
     public function getTransactionsOfUser($user_id): jsonResponse
     {
-        $transaction = Transaction::with(['subcategory', 'user'])
+        $transaction = Transaction::with(['subcategory.category', 'user'])
             ->where('user_id', $user_id)
             ->get();
         return response()->json($transaction, 200);
